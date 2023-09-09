@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<button class="btn btn-primary" id="button">Generate</button>
+<script>
+const data = [
+  {
+   "id": 1,
+   "username": "Gonzales",
+   "video_name": "The Ledergberg Replica Plating Experiment",
+   "action": "Downloaded"
+  },
+  {
+   "id": 2,
+   "username": "Dominique",
+   "video_name": "Atomic Structure of DNA",
+   "action": "Viewed"
+  },
+  {
+    "id": 2,
+    "username": "Mark",
+    "video_name": "Book of Chemistry",
+    "action": "Downloaded"
+  }
+];
+function jsonDulicateId(data){
+const ids = new set();
+for(const item of data){
+if(ids.has(item.id)){
+return true;
+}
+ids.add(item.id);
+}
+return false;
+}
+function checkTheDuplicates(){
+if(jsonDulicateId(data)){
+alert('Duplicate id');
+} else {
+}
+}
+
+const button = document.getElementById('button');
+button.addeventListener('click', checkTheDuplicates);
+
+</script>
+</body>
+</html>
